@@ -19,6 +19,8 @@ parameters:
   default: ''
 
 steps:
+- task: NuGetAuthenticate@1 # just auth w/ internal feeds
+
 - task: MavenAuthenticate@0
   inputs:
     artifactsFeeds: ${{ parameters.artifactFeeds }}
